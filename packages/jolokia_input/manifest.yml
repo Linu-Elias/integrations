@@ -1,7 +1,7 @@
 format_version: "3.0.0"
 name: jolokia
 title: "Jolokia Input"
-version: "0.7.1"
+version: "0.7.2"
 description: "Collects Metrics from Jolokia Agents"
 type: input
 categories:
@@ -163,7 +163,13 @@ policy_templates:
         show_user: false
         description: >
           Processors are used to reduce the number of fields in the exported event or to enhance the event with metadata. This executes in the agent before the events are shipped. See [Processors](https://www.elastic.co/guide/en/fleet/current/elastic-agent-processor-configuration.html) for details.
-
+      - name: custom
+        title: Custom configurations
+        show_user: false
+        description: >
+          Custom configuration options in YAML format. This allows you to add custom settings, but use with caution as incorrect settings may cause issues with your configuration.
+        type: yaml
+        default: ""
 owner:
   github: elastic/obs-infraobs-integrations
   type: elastic
